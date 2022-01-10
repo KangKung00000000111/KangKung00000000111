@@ -105,7 +105,8 @@ end)
 
 JoinServer.MouseButton1Down:Connect(function()
     setclipboard("https://discord.gg/B659FscCBz")
-    syn.request({
+    local Req = (syn and syn.request) or http_request
+    Req({
         Url = "http://127.0.0.1:6463/rpc?v=1",
         Method = "POST",
         Headers = {
@@ -126,7 +127,7 @@ end)
 local Destroyer
 spawn(function()
     pcall(function()
-        local FullTextTH = "ตอนนี้ script นี้ได้ disconnected แล้วเพราะงั้นไปละแง้นๆ.... หยอก! สคิปตอนนี้ได้ย้ายระบบใหม่แล้ว กรุณาไปรับ Key ที่ Discord : Kang Kung#7271 หรือ FB : Kang Kung เพื่อนำมา redeem key ที่ discord server Kr(?) ด้วยนะครับ ถ้าไม่รับหรือ redeem ภายใน 3 เดือนผมจะถือว่าสละสิทธิ์การเป็น buyer นะครับ ใครที่มีเพื่อนที่เป็น buyer ไปช่วยบอกด้วยนะครับ :)"
+        local FullTextTH = "ตอนนี้ script นี้ได้ disconnected แล้วเพราะงั้นไปละแง้นๆ.... หยอก! สคิปตอนนี้ได้ย้ายระบบใหม่แล้ว กรุณาไปรับ Key ที่ Discord : Kang Kung#7271 หรือ FB : Kang Kung เพื่อนำมา redeem key ที่ discord server Kr(?) ด้วยนะครับ ถ้าไม่รับหรือ redeem ภายใน 10/3/2565 ผมจะถือว่าสละสิทธิ์การเป็น buyer นะครับ ใครที่มีเพื่อนที่เป็น buyer ไปช่วยบอกด้วยนะครับ :)"
         local GFullText = string.split(FullTextTH, "")
         local Content = ""
         for _, value in pairs(GFullText) do
@@ -148,7 +149,7 @@ EN.MouseButton1Down:Connect(function()
         EN.Text = "TH"
         spawn(function()
             pcall(function()
-                local FullTextTH = "Now this script has been disconnected so go away.... tease!, script has now moved to a new system. Please go get the key at Discord : Kang Kung#7271 or FB : Kang Kung to redeem key at discord server Kr(?) if you don't receive or redeem it within 3 months. It will be considered a waiver of being a buyer. If you have a friend who is a buyer, please tell him :)"
+                local FullTextTH = "Now this script has been disconnected so go away.... tease!, script has now moved to a new system. Please go get the key at Discord : Kang Kung#7271 or FB : Kang Kung to redeem key at discord server Kr(?) if you don't receive or redeem it within 10/3/2565. It will be considered a waiver of being a buyer. If you have a friend who is a buyer, please tell him :)"
                 local GFullText = string.split(FullTextTH, "")
                 local Content = ""
                 for _, value in pairs(GFullText) do
